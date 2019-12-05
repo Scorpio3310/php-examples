@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="description" content="Contact Form with Invisible reCAPTCHA, Ajax and PHP">
+    <meta name="author" content="Contact Form with Invisible reCAPTCHA, Ajax and PHP">
+    <meta name="keywords" content="Contact Form, Invisible reCAPTCHA, Ajax, PHP">
+    <title>Contact Form with Invisible reCAPTCHA, Ajax and PHP</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Contact Form with Invisible reCAPTCHA, Ajax and PHP</h1>
+    <div class="box">
+        <form class="formCheck" id="contactSend">
+            <div class="inputBox validate-input" data-validate="Enter name">
+                <input class="inputText" type="text" name="name" id="name" >
+                <span class="spanName" data-placeholder="Name"></span>
+            </div>
+            <div class="inputBox validate-input" data-validate="Enter e-mail">
+                <input class="inputText" type="email" name="email" id="email" reqired>
+                <span class="spanName" data-placeholder="E-mail"></span>
+            </div>
+            <div class="inputBox validate-input" data-validate="Enter message">
+                <textarea class="inputText likeTextbox" type="text" name="message" id="message" data-autoresize></textarea>
+                <span class="spanName" data-placeholder="Message"></span>
+            </div>
+            <div id="msg"></div> <!-- Message if something is wrong -->
+            <button class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="submitData" onclick="checkall()">Send</button> <!-- Google test key, change later with your own key -->
+        </form>
+        <div class="sendOK"> <!-- After form successfully submit show message -->
+            <div class="emailSend">Email Sent</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
